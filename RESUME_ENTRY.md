@@ -2,7 +2,7 @@
 
 ## Full entry (Projects section) — concise
 
-Rate Lab — Interactive Interest-Rate Sensitivity for 20 DCF Models | Oct 2026
+Rate Lab — Interactive Interest-Rate Sensitivity for 20 DCF Models
 
 - Built to show how interest rates drive valuation outcomes: an interactive website that reprices all 20 of my Sector Teardown DCF models live as the US 10Y and terminal growth move — rebuilding each company's WACC from CAPM, its own beta and capital structure (cost-of-equity discounting for the four bank distribution models), with BUY/HOLD/PASS calls and median upside recomputing in real time.
 - Inputs reverse-engineered from the published models under a verification gate — each extraction had to reproduce its published base-case value within 1% (20 of 20 passed, worst deviation 0.015%; workbooks independently recalculated in LibreOffice); prices refresh weekly via GitHub Actions. architchawla26.github.io/Rate-Lab | github.com/ArchitChawla26/Rate-Lab
