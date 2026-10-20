@@ -1,0 +1,559 @@
+{
+ "meta": {
+  "project": "Rate Lab",
+  "author": "Archit Chawla",
+  "model_asof": "2026-10-19",
+  "price_asof": "2026-10-19",
+  "base_risk_free": 0.051,
+  "erp": 0.045,
+  "base_terminal_growth": 0.03,
+  "bands": {
+   "buy_min_upside_pct": 20,
+   "hold_min_upside_pct": -10
+  },
+  "source": "Sector Teardown 20-company DCF models (Archit Chawla, Oct 2026)",
+  "disclaimer": "Independent project for skill demonstration; not investment advice."
+ },
+ "companies": [
+  {
+   "ticker": "HOOD",
+   "name": "Robinhood Markets, Inc.",
+   "sector": "Fintech",
+   "price": 96.52,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 2.35,
+   "shares": 899.1,
+   "net_debt": 17344.0,
+   "after_tax_cost_of_debt": 0.04345,
+   "w_equity": 0.796538,
+   "w_debt": 0.203462,
+   "cash_flows": [
+    2637.8,
+    3396.7,
+    4185.9,
+    4937.3,
+    5605.4
+   ],
+   "published": {
+    "bear": 9.7,
+    "base": 29.15,
+    "bull": 50.38
+   }
+  },
+  {
+   "ticker": "COIN",
+   "name": "Coinbase Global, Inc.",
+   "sector": "Fintech",
+   "price": 168.45,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 3.41,
+   "shares": 287.2,
+   "net_debt": -1945.8,
+   "after_tax_cost_of_debt": 0.0533,
+   "w_equity": 0.872657,
+   "w_debt": 0.127343,
+   "cash_flows": [
+    2278.8,
+    2883.5,
+    3791.2,
+    4499.7,
+    5057.4
+   ],
+   "published": {
+    "bear": 41.44,
+    "base": 93.99,
+    "bull": 156.53
+   }
+  },
+  {
+   "ticker": "SOFI",
+   "name": "SoFi Technologies, Inc.",
+   "sector": "Fintech",
+   "price": 14.3,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 2.33,
+   "shares": 1291.6,
+   "net_debt": 278.9,
+   "after_tax_cost_of_debt": 0.0474,
+   "w_equity": 0.846603,
+   "w_debt": 0.153397,
+   "cash_flows": [
+    742.6,
+    1056.9,
+    1434.0,
+    1795.6,
+    2167.7
+   ],
+   "published": {
+    "bear": 5.06,
+    "base": 11.62,
+    "bull": 17.34
+   }
+  },
+  {
+   "ticker": "SCHW",
+   "name": "The Charles Schwab Corporation",
+   "sector": "Fintech",
+   "price": 89.58,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 0.78,
+   "shares": 1729.3,
+   "net_debt": -3235.0,
+   "after_tax_cost_of_debt": 0.0429,
+   "w_equity": 0.809825,
+   "w_debt": 0.190175,
+   "cash_flows": [
+    10990.6,
+    12286.0,
+    13470.2,
+    14198.5,
+    15079.4
+   ],
+   "published": {
+    "bear": 77.41,
+    "base": 161.09,
+    "bull": 269.82
+   }
+  },
+  {
+   "ticker": "NVDA",
+   "name": "NVIDIA Corporation",
+   "sector": "AI Infra & Semis",
+   "price": 217.09,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 2.22,
+   "shares": 24147.0,
+   "net_debt": 15908.0,
+   "after_tax_cost_of_debt": 0.03555,
+   "w_equity": 0.992787,
+   "w_debt": 0.007213,
+   "cash_flows": [
+    162764.9,
+    219966.9,
+    276756.0,
+    332375.6,
+    384795.3
+   ],
+   "published": {
+    "bear": 47.48,
+    "base": 103.36,
+    "bull": 157.35
+   }
+  },
+  {
+   "ticker": "AVGO",
+   "name": "Broadcom Inc.",
+   "sector": "AI Infra & Semis",
+   "price": 334.59,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.48,
+   "shares": 4773.6,
+   "net_debt": 35444.0,
+   "after_tax_cost_of_debt": 0.0474,
+   "w_equity": 0.964621,
+   "w_debt": 0.035379,
+   "cash_flows": [
+    49947.8,
+    65158.4,
+    78349.8,
+    90054.3,
+    101617.4
+   ],
+   "published": {
+    "bear": 83.29,
+    "base": 198.72,
+    "bull": 334.49
+   }
+  },
+  {
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices, Inc.",
+   "sector": "AI Infra & Semis",
+   "price": 538.05,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 2.45,
+   "shares": 1632.5,
+   "net_debt": -810.0,
+   "after_tax_cost_of_debt": 0.0395,
+   "w_equity": 0.995282,
+   "w_debt": 0.004718,
+   "cash_flows": [
+    9547.2,
+    13742.4,
+    18414.6,
+    23635.6,
+    28852.0
+   ],
+   "published": {
+    "bear": 32.25,
+    "base": 101.5,
+    "bull": 163.81
+   }
+  },
+  {
+   "ticker": "ALAB",
+   "name": "Astera Labs, Inc.",
+   "sector": "AI Infra & Semis",
+   "price": 286.58,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 3.7,
+   "shares": 173.5,
+   "net_debt": -164.0,
+   "after_tax_cost_of_debt": 0.0474,
+   "w_equity": 0.999921,
+   "w_debt": 7.9e-05,
+   "cash_flows": [
+    444.5,
+    708.4,
+    1015.6,
+    1314.0,
+    1628.1
+   ],
+   "published": {
+    "bear": 9.32,
+    "base": 35.27,
+    "bull": 57.96
+   }
+  },
+  {
+   "ticker": "CRM",
+   "name": "Salesforce, Inc.",
+   "sector": "Enterprise SaaS",
+   "price": 242.45,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.25,
+   "shares": 956.0,
+   "net_debt": 33433.0,
+   "after_tax_cost_of_debt": 0.0395,
+   "w_equity": 0.84645,
+   "w_debt": 0.15355,
+   "cash_flows": [
+    14152.3,
+    15438.7,
+    16684.7,
+    17861.2,
+    19021.0
+   ],
+   "published": {
+    "bear": 129.66,
+    "base": 223.72,
+    "bull": 338.58
+   }
+  },
+  {
+   "ticker": "NOW",
+   "name": "ServiceNow, Inc.",
+   "sector": "Enterprise SaaS",
+   "price": 145.36,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 0.97,
+   "shares": 1047.0,
+   "net_debt": 5950.0,
+   "after_tax_cost_of_debt": 0.0395,
+   "w_equity": 0.946192,
+   "w_debt": 0.053808,
+   "cash_flows": [
+    4347.0,
+    5243.8,
+    6215.6,
+    7237.6,
+    8276.3
+   ],
+   "published": {
+    "bear": 52.54,
+    "base": 101.98,
+    "bull": 172.7
+   }
+  },
+  {
+   "ticker": "SNOW",
+   "name": "Snowflake Inc.",
+   "sector": "Enterprise SaaS",
+   "price": 315.35,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.35,
+   "shares": 337.5,
+   "net_debt": 1056.6000000000001,
+   "after_tax_cost_of_debt": 0.04345,
+   "w_equity": 0.974005,
+   "w_debt": 0.025995,
+   "cash_flows": [
+    964.9,
+    1798.6,
+    2907.2,
+    3868.4,
+    4910.3
+   ],
+   "published": {
+    "bear": 62.85,
+    "base": 137.47,
+    "bull": 226.06
+   }
+  },
+  {
+   "ticker": "PLTR",
+   "name": "Palantir Technologies Inc.",
+   "sector": "Enterprise SaaS",
+   "price": 194.15,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.6,
+   "shares": 2565.2,
+   "net_debt": -1818.6,
+   "after_tax_cost_of_debt": 0.04345,
+   "w_equity": 0.999557,
+   "w_debt": 0.000443,
+   "cash_flows": [
+    2980.6,
+    4580.0,
+    6268.0,
+    7899.7,
+    9467.0
+   ],
+   "published": {
+    "bear": 14.98,
+    "base": 31.79,
+    "bull": 50.69
+   }
+  },
+  {
+   "ticker": "AAPL",
+   "name": "Apple Inc.",
+   "sector": "Consumer Tech",
+   "price": 342.94,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.07,
+   "shares": 14594.18,
+   "net_debt": 21945.0,
+   "after_tax_cost_of_debt": 0.04345,
+   "w_equity": 0.983452,
+   "w_debt": 0.016548,
+   "cash_flows": [
+    128952.9,
+    141060.5,
+    151436.4,
+    160829.2,
+    169160.3
+   ],
+   "published": {
+    "bear": 81.97,
+    "base": 146.75,
+    "bull": 217.8
+   }
+  },
+  {
+   "ticker": "AMZN",
+   "name": "Amazon.com, Inc.",
+   "sector": "Consumer Tech",
+   "price": 262.45,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.46,
+   "shares": 10786.31,
+   "net_debt": 66799.0,
+   "after_tax_cost_of_debt": 0.04345,
+   "w_equity": 0.927786,
+   "w_debt": 0.072214,
+   "cash_flows": [
+    47147.8,
+    56994.8,
+    67604.5,
+    79145.9,
+    91487.6
+   ],
+   "published": {
+    "bear": 19.05,
+    "base": 79.68,
+    "bull": 128.28
+   }
+  },
+  {
+   "ticker": "META",
+   "name": "Meta Platforms, Inc.",
+   "sector": "Consumer Tech",
+   "price": 705.44,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.19,
+   "shares": 2550.0,
+   "net_debt": 22058.0,
+   "after_tax_cost_of_debt": 0.04345,
+   "w_equity": 0.941535,
+   "w_debt": 0.058465,
+   "cash_flows": [
+    56198.1,
+    65217.6,
+    73653.4,
+    81610.7,
+    88806.9
+   ],
+   "published": {
+    "bear": 181.59,
+    "base": 409.83,
+    "bull": 652.74
+   }
+  },
+  {
+   "ticker": "GOOGL",
+   "name": "Alphabet Inc.",
+   "sector": "Consumer Tech",
+   "price": 344.18,
+   "price_asof": "2026-10-19",
+   "model_type": "enterprise",
+   "method": "exact",
+   "beta": 1.21,
+   "shares": 12230.0,
+   "net_debt": -129718.0,
+   "after_tax_cost_of_debt": 0.04345,
+   "w_equity": 0.973644,
+   "w_debt": 0.026356,
+   "cash_flows": [
+    104945.2,
+    120101.2,
+    134829.1,
+    149780.4,
+    163589.6
+   ],
+   "published": {
+    "bear": 87.64,
+    "base": 164.95,
+    "bull": 243.51
+   }
+  },
+  {
+   "ticker": "JPM",
+   "name": "JPMorgan Chase & Co.",
+   "sector": "Diversified Financials",
+   "price": 333.53,
+   "price_asof": "2026-10-19",
+   "model_type": "distribution",
+   "method": "exact",
+   "beta": 1.02,
+   "shares": 2655.6,
+   "net_debt": null,
+   "after_tax_cost_of_debt": 0.0,
+   "w_equity": 1.0,
+   "w_debt": 0.0,
+   "cash_flows": [
+    52763.3,
+    56003.7,
+    59436.2,
+    61156.0,
+    62990.7
+   ],
+   "published": {
+    "bear": 156.06,
+    "base": 313.42,
+    "bull": 500.78
+   }
+  },
+  {
+   "ticker": "GS",
+   "name": "The Goldman Sachs Group, Inc.",
+   "sector": "Diversified Financials",
+   "price": 875.78,
+   "price_asof": "2026-10-19",
+   "model_type": "distribution",
+   "method": "exact",
+   "beta": 1.29,
+   "shares": 291.17,
+   "net_debt": null,
+   "after_tax_cost_of_debt": 0.0,
+   "w_equity": 1.0,
+   "w_debt": 0.0,
+   "cash_flows": [
+    16259.2,
+    17580.5,
+    18635.4,
+    19567.1,
+    20349.8
+   ],
+   "published": {
+    "bear": 280.37,
+    "base": 775.17,
+    "bull": 1196.8
+   }
+  },
+  {
+   "ticker": "MS",
+   "name": "Morgan Stanley",
+   "sector": "Diversified Financials",
+   "price": 178.47,
+   "price_asof": "2026-10-19",
+   "model_type": "distribution",
+   "method": "exact",
+   "beta": 1.22,
+   "shares": 1570.57,
+   "net_debt": null,
+   "after_tax_cost_of_debt": 0.0,
+   "w_equity": 1.0,
+   "w_debt": 0.0,
+   "cash_flows": [
+    15014.1,
+    16065.1,
+    17029.0,
+    17880.4,
+    18595.6
+   ],
+   "published": {
+    "bear": 58.21,
+    "base": 136.93,
+    "bull": 204.19
+   }
+  },
+  {
+   "ticker": "BLK",
+   "name": "BlackRock, Inc.",
+   "sector": "Diversified Financials",
+   "price": 1124.6,
+   "price_asof": "2026-10-19",
+   "model_type": "distribution",
+   "method": "exact",
+   "beta": 1.2,
+   "shares": 154.87,
+   "net_debt": null,
+   "after_tax_cost_of_debt": 0.0,
+   "w_equity": 1.0,
+   "w_debt": 0.0,
+   "cash_flows": [
+    5497.5,
+    6157.2,
+    6697.6,
+    7233.4,
+    7739.8
+   ],
+   "published": {
+    "bear": 337.01,
+    "base": 575.01,
+    "bull": 896.74
+   }
+  }
+ ]
+}
