@@ -1,0 +1,222 @@
+[
+ {
+  "ticker": "HOOD",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 29.15,
+  "mirror_base": 29.15,
+  "recomputed_base": 29.15,
+  "gate_diff_pct": 0.004,
+  "workbook_base": 29.15,
+  "workbook_diff_pct": 0.003
+ },
+ {
+  "ticker": "COIN",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 93.99,
+  "mirror_base": 93.99,
+  "recomputed_base": 93.99,
+  "gate_diff_pct": -0.003,
+  "workbook_base": 93.99,
+  "workbook_diff_pct": -0.003
+ },
+ {
+  "ticker": "SOFI",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 11.62,
+  "mirror_base": 11.62,
+  "recomputed_base": 11.62,
+  "gate_diff_pct": -0.006,
+  "workbook_base": 11.62,
+  "workbook_diff_pct": -0.005
+ },
+ {
+  "ticker": "SCHW",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 161.09,
+  "mirror_base": 161.09,
+  "recomputed_base": 161.09,
+  "gate_diff_pct": 0.0,
+  "workbook_base": 161.09,
+  "workbook_diff_pct": 0.0
+ },
+ {
+  "ticker": "NVDA",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 103.36,
+  "mirror_base": 103.36,
+  "recomputed_base": 103.36,
+  "gate_diff_pct": -0.002,
+  "workbook_base": 103.36,
+  "workbook_diff_pct": -0.002
+ },
+ {
+  "ticker": "AVGO",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 198.72,
+  "mirror_base": 198.72,
+  "recomputed_base": 198.72,
+  "gate_diff_pct": -0.002,
+  "workbook_base": 198.72,
+  "workbook_diff_pct": -0.002
+ },
+ {
+  "ticker": "AMD",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 101.5,
+  "mirror_base": 101.5,
+  "recomputed_base": 101.5,
+  "gate_diff_pct": -0.003,
+  "workbook_base": 101.5,
+  "workbook_diff_pct": -0.003
+ },
+ {
+  "ticker": "ALAB",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 35.27,
+  "mirror_base": 35.27,
+  "recomputed_base": 35.27,
+  "gate_diff_pct": 0.013,
+  "workbook_base": 35.27,
+  "workbook_diff_pct": 0.011
+ },
+ {
+  "ticker": "CRM",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 223.72,
+  "mirror_base": 223.72,
+  "recomputed_base": 223.72,
+  "gate_diff_pct": 0.001,
+  "workbook_base": 223.72,
+  "workbook_diff_pct": 0.002
+ },
+ {
+  "ticker": "NOW",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 101.98,
+  "mirror_base": 101.98,
+  "recomputed_base": 101.98,
+  "gate_diff_pct": 0.001,
+  "workbook_base": 101.98,
+  "workbook_diff_pct": 0.001
+ },
+ {
+  "ticker": "SNOW",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 137.47,
+  "mirror_base": 137.47,
+  "recomputed_base": 137.47,
+  "gate_diff_pct": -0.001,
+  "workbook_base": 137.47,
+  "workbook_diff_pct": -0.002
+ },
+ {
+  "ticker": "PLTR",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 31.79,
+  "mirror_base": 31.79,
+  "recomputed_base": 31.79,
+  "gate_diff_pct": -0.015,
+  "workbook_base": 31.79,
+  "workbook_diff_pct": -0.015
+ },
+ {
+  "ticker": "AAPL",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 146.75,
+  "mirror_base": 146.75,
+  "recomputed_base": 146.75,
+  "gate_diff_pct": -0.0,
+  "workbook_base": 146.75,
+  "workbook_diff_pct": -0.001
+ },
+ {
+  "ticker": "AMZN",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 79.68,
+  "mirror_base": 79.68,
+  "recomputed_base": 79.68,
+  "gate_diff_pct": -0.006,
+  "workbook_base": 79.68,
+  "workbook_diff_pct": -0.006
+ },
+ {
+  "ticker": "META",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 409.83,
+  "mirror_base": 409.83,
+  "recomputed_base": 409.83,
+  "gate_diff_pct": 0.001,
+  "workbook_base": 409.83,
+  "workbook_diff_pct": 0.001
+ },
+ {
+  "ticker": "GOOGL",
+  "model_type": "enterprise",
+  "method": "exact",
+  "published_base": 164.95,
+  "mirror_base": 164.95,
+  "recomputed_base": 164.95,
+  "gate_diff_pct": 0.002,
+  "workbook_base": 164.95,
+  "workbook_diff_pct": 0.002
+ },
+ {
+  "ticker": "JPM",
+  "model_type": "distribution",
+  "method": "exact",
+  "published_base": 313.42,
+  "mirror_base": 313.42,
+  "recomputed_base": 313.42,
+  "gate_diff_pct": 0.001,
+  "workbook_base": 313.42,
+  "workbook_diff_pct": 0.001
+ },
+ {
+  "ticker": "GS",
+  "model_type": "distribution",
+  "method": "exact",
+  "published_base": 775.17,
+  "mirror_base": 775.17,
+  "recomputed_base": 775.17,
+  "gate_diff_pct": 0.0,
+  "workbook_base": 775.17,
+  "workbook_diff_pct": 0.0
+ },
+ {
+  "ticker": "MS",
+  "model_type": "distribution",
+  "method": "exact",
+  "published_base": 136.93,
+  "mirror_base": 136.93,
+  "recomputed_base": 136.93,
+  "gate_diff_pct": -0.002,
+  "workbook_base": 136.93,
+  "workbook_diff_pct": -0.002
+ },
+ {
+  "ticker": "BLK",
+  "model_type": "distribution",
+  "method": "exact",
+  "published_base": 575.01,
+  "mirror_base": 575.01,
+  "recomputed_base": 575.01,
+  "gate_diff_pct": -0.0,
+  "workbook_base": 575.01,
+  "workbook_diff_pct": -0.001
+ }
+]
