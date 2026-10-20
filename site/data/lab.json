@@ -11,7 +11,7 @@
    "buy_min_upside_pct": 20,
    "hold_min_upside_pct": -10
   },
-  "source": "Sector Teardown 20-company DCF models (Archit Chawla, Oct 2026)",
+  "source": "Sector Teardown 20-company DCF models (Archit Chawla)",
   "disclaimer": "Independent project for skill demonstration; not investment advice."
  },
  "companies": [
