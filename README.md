@@ -58,6 +58,6 @@ Requires Python 3 + openpyxl, and LibreOffice for the workbook check. Source mod
 - Only the discount rate and terminal growth move; real rate shifts would also change the forecasts themselves.
 - After-tax cost of debt, betas, capital-structure weights and share counts are held at the October 19, 2026
   model-date figures.
-- Prices refresh weekly; fair values stay anchored to the October 2026 models.
+- Prices refresh weekly; fair values stay anchored to the published Sector Teardown models.
 
 *Independent project for skill demonstration; not investment advice.*
