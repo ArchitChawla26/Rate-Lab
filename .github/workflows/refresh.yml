@@ -1,0 +1,52 @@
+name: Weekly price refresh
+
+# Mondays at 22:15 UTC — after the Sector Teardown feed's Monday refresh
+# (21:30 UTC). Pulls the latest closing prices into lab.json, commits, and
+# deploys Pages in the same run (a GITHUB_TOKEN commit does not trigger
+# other workflows, so this workflow deploys itself).
+on:
+  schedule:
+    - cron: "15 22 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Refresh prices from the Sector Teardown feed
+        run: python refresh_prices.py
+
+      - name: Commit updated prices
+        run: |
+          git config user.name "price-refresh-bot"
+          git config user.email "price-refresh-bot@users.noreply.github.com"
+          git add site/data/lab.json
+          git diff --cached --quiet || git commit -m "Weekly price refresh $(date -u +%F)"
+          git push
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
