@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rate Lab — What Are 20 Companies Worth at a Different Interest Rate? | Archit Chawla</title>
+<meta name="description" content="Interactive rate-sensitivity lab: reprice all 20 Sector Teardown DCF models live as the US 10Y risk-free rate and terminal growth move. By Archit Chawla.">
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="eyebrow">Rate Lab · Interest-Rate Sensitivity</div>
+    <h1>What are these 20 companies worth at a different rate?</h1>
+    <p class="sub">Every valuation in my 20-company Sector Teardown was built at a 5.1% US 10Y.
+      Drag the rate and the whole universe reprices — same cash flows, same models, new discount rate.
+      Fair values, implied upsides and BUY / HOLD / PASS calls recompute live.</p>
+    <p class="byline">By <strong>Archit Chawla</strong><span class="dot">·</span>
+      Models as of October 19, 2026<span class="dot">·</span>
+      Prices as of <span id="price-asof">—</span><span class="dot">·</span>
+      <a class="hdr-link" href="https://architchawla26.github.io/Sector-Teardown-20/">Sector Teardown dashboard →</a></p>
+  </div>
+</header>
+
+<main class="wrap page-enter">
+
+  <div class="stats" id="stats">
+    <div class="stat"><div class="k">Scenario 10Y</div><div class="v" id="st-rf">5.10%</div></div>
+    <div class="stat"><div class="k">Median upside</div><div class="v" id="st-median">—</div></div>
+    <div class="stat"><div class="k">Buy</div><div class="v buy" id="st-buy">—</div></div>
+    <div class="stat"><div class="k">Hold</div><div class="v hold" id="st-hold">—</div></div>
+    <div class="stat"><div class="k">Pass</div><div class="v pass" id="st-pass">—</div></div>
+  </div>
+
+  <section>
+    <h2>The scenario</h2>
+    <p class="section-note">Two levers, everything else held at the published model. The equity risk premium stays at the
+      framework's 4.5%; each company's beta, cash-flow forecast, capital structure and after-tax cost of debt stay
+      exactly as modelled on October 19, 2026 — only the risk-free rate inside the discount rate, and the terminal
+      growth rate, move.</p>
+
+    <div class="lab-panel">
+      <div class="slider-block">
+        <div class="slider-head">
+          <label for="rf">US 10Y risk-free rate</label>
+          <output id="rf-out" for="rf">5.10%</output>
+        </div>
+        <input type="range" id="rf" min="3.00" max="7.00" step="0.05" value="5.10">
+        <div class="ticks"><span>3.00%</span><span>Published model: 5.10%</span><span>7.00%</span></div>
+      </div>
+      <div class="slider-block">
+        <div class="slider-head">
+          <label for="tg">Terminal growth</label>
+          <output id="tg-out" for="tg">3.00%</output>
+        </div>
+        <input type="range" id="tg" min="2.00" max="4.00" step="0.25" value="3.00">
+        <div class="ticks"><span>2.00%</span><span>Published model: 3.00%</span><span>4.00%</span></div>
+      </div>
+      <div class="lab-foot">
+        <p class="scenario-line" id="scenario-line">—</p>
+        <button id="reset" type="button">Reset to published case (5.10% / 3.00%)</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The universe at this rate</h2>
+    <p class="section-note">Calls use the teardown's bands: <strong>BUY</strong> at +20% implied upside or better,
+      <strong>HOLD</strong> between −10% and +20%, <strong>PASS</strong> below −10%. “Published base” is the fair value
+      in the original model at 5.10% / 3.00% — at the reset settings the two columns agree, which is the point of the
+      verification gate described below. Click a column heading to sort.</p>
+    <div class="table-scroll">
+      <table class="companies">
+        <thead>
+          <tr>
+            <th data-sort="ticker">Company</th>
+            <th data-sort="sector">Sector</th>
+            <th class="num" data-sort="price">Price ($)</th>
+            <th class="num" data-sort="rate">Discount rate</th>
+            <th class="num" data-sort="value">Fair value ($)</th>
+            <th class="num" data-sort="upside">Implied upside</th>
+            <th data-sort="call">Call</th>
+            <th class="num" data-sort="published">Published base ($)</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="footnote">Discount rate is WACC for the 16 enterprise DCFs and cost of equity for the four distribution
+      DCFs (JPM, GS, MS, BLK), where equity is valued directly. Prices refresh weekly from the Sector Teardown feed.</p>
+  </section>
+
+  <section>
+    <h2>Methodology &amp; verification</h2>
+    <div class="method">
+      <p><strong>What moves, mechanically.</strong> For an enterprise DCF the scenario rate enters through CAPM:
+        cost of equity = Rf + beta × 4.5%, blended at the model's own capital-structure weights with its after-tax
+        cost of debt held fixed, giving WACC(Rf). The model's projected free cash flows (2026–2030) are discounted at
+        that WACC, a Gordon terminal value is struck at the selected terminal growth, net debt is bridged out, and the
+        result is divided by shares outstanding. For the four financials modelled on distributable cash flow (JPM, GS,
+        MS, BLK), the same cash flows are discounted at the cost of equity directly and there is no debt bridge —
+        exactly as in the published workbooks.</p>
+      <p><strong>How the inputs were extracted.</strong> Each teardown workbook was built by a Python script whose
+        mirror function reproduces the workbook's arithmetic. I executed a copy of each company's own build script,
+        recovered its base-case cash-flow stream, beta, share count, net debt and discount-rate build, and stored them
+        in this site's data file — the source models were never modified.</p>
+      <p><strong>The verification gate.</strong> Before a company was allowed to use the exact repricing above, my
+        recomputation at the published settings (Rf 5.1%, terminal growth 3.0%) had to reproduce its published
+        base-case value within 1%. <strong>All 20 companies passed</strong>; the worst deviation is 0.015% (PLTR),
+        pure rounding from the published two-decimal values. A second, independent check recalculated all 20
+        workbooks in LibreOffice and tied every DCF_Base per-share cell back to the published figure — again 20 of 20.
+        The full per-company table is in VERIFICATION.md in the project repository. Had a company failed the gate, it
+        would have been repriced by interpolation across its published bear/base/bull values and flagged here; none
+        needed it.</p>
+      <p><strong>What this shows.</strong> At the published 5.1% the lab reproduces the teardown's calls exactly —
+        1 BUY, 2 HOLD, 17 PASS, median implied upside −46.5%. Cut the 10Y to 4.0% and the median improves only to
+        −40.1% (1 BUY, 3 HOLD, 16 PASS): even a full point of rate relief does not rescue a universe priced for
+        flawless growth, because most of the gap sits in the cash-flow expectations, not the discount rate. The most
+        rate-sensitive names are the long-duration, low-current-yield ones — SCHW and NOW each gain ~23% of fair value
+        on that one-point move; the least sensitive are the high-beta names whose cost of equity is dominated by the
+        beta term (COIN, ALAB, ~7%).</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Limitations</h2>
+    <div class="method">
+      <p>· <strong>Cash flows are frozen.</strong> Only the discount rate and terminal growth move. In reality a 200 bp
+        rate shift would change growth, margins, multiples and the forecasts themselves — this isolates the pure
+        discounting channel, nothing more.</p>
+      <p>· <strong>Cost of debt is held fixed</strong> at each model's after-tax figure. A fuller treatment would reprice
+        debt with the risk-free rate too; holding it fixed slightly understates sensitivity for levered names.</p>
+      <p>· <strong>Betas, weights and share counts are as of the model date</strong> (October 19, 2026) and do not update.</p>
+      <p>· <strong>Prices refresh weekly</strong> from the Sector Teardown feed, so implied upsides drift with the market
+        between visits while fair values stay anchored to the October 2026 models.</p>
+      <p>· DCF values are scenario arithmetic on my own published assumptions, not predictions. Reasonable analysts will
+        disagree with the inputs; the workbooks behind every number are public in the Sector Teardown repository.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Rate Lab</strong> — a companion to the 20-company Sector Teardown, by Archit Chawla.
+      Models as of October 19, 2026; prices as of <span id="price-asof-f">—</span>, refreshed weekly.</p>
+    <p>Disclaimer: Independent project for skill demonstration; not investment advice. Nothing here is a recommendation
+      to buy or sell any security.</p>
+  </div>
+</footer>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
