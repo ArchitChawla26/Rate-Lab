@@ -36,7 +36,7 @@ consumed by VERIFICATION.md).
 
 Rerun:  python3 extract_data.py        (from ~/workspace/rate-lab/)
 Requires: python3 stdlib + openpyxl; LibreOffice (soffice) for check 2.
-Author: Archit Chawla, October 2026.
+Author: Archit Chawla.
 """
 
 import contextlib
@@ -277,7 +277,7 @@ def main():
             "erp": ERP,
             "base_terminal_growth": G_BASE,
             "bands": {"buy_min_upside_pct": 20, "hold_min_upside_pct": -10},
-            "source": "Sector Teardown 20-company DCF models (Archit Chawla, Oct 2026)",
+            "source": "Sector Teardown 20-company DCF models (Archit Chawla)",
             "disclaimer": "Independent project for skill demonstration; not investment advice.",
         },
         "companies": [{
