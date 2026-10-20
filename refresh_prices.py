@@ -8,7 +8,7 @@ Only the price side moves: fair-value inputs stay anchored to the October 19,
 
 Run by .github/workflows/refresh.yml; can also be run locally:
     python3 refresh_prices.py
-Author: Archit Chawla, October 2026.
+Author: Archit Chawla.
 """
 
 import json
